@@ -1,15 +1,14 @@
-from flask import Flask
+from flask import Flask, render_template
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 @app.route("/")
-def hello_world():
-    return "<h5>Hello, World!</h5>"
+def root_page():
+    return render_template ('root_page.html')
 
-@app.route("/about")
-def about():
-    return "<h5>this is my about page</h5>"
-
+# @app.route("/id_generator")
+# def id_gen():
+#      return render_template ('id_generator.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
