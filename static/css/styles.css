@@ -1,52 +1,97 @@
-* {
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  body {
+*{
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  /* Style the top navigation bar */
-  .topnav {
-    overflow: auto;
-    background-color: red;
-    border:solid;
-    border-color: black;
-    
-  }
-  
-  /* Style the topnav links */
-  .topnav a {
-    float: right;
-    display:flex;
-    color: white;
-    text-align: center;
-    margin: 0% 15% 0% 15%; 
-    padding: 1% 0.5% 1% 1% ;
-    text-decoration: none;
-  }
-  
-  /* Change color on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* Style the content */
-  .content {
-    background-color: #ddd;
-    background-image: url('/static/images/campus.jpg');
-    background-size:cover;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: cover;
     background-repeat: no-repeat;
-    /* background-attachment:fixed; */
-    margin-top: -2%;
-    height:50vh;
-  }
-  
-  /* Style the footer */
-  .footer {
-    background-color: #f1f1f1;
-    padding: 10px;
-  }
+   
+}
+.banner{
+    background-color: rgb(197, 8, 8);
+    padding: 1.1rem;
+    color: aliceblue;
+    font-size: 1.3rem;
+    width: 100%;
+    font-family:'League Spartan';
+    letter-spacing: 5px;
+    display: flex;
+}
+.banner .pyceal h4{
+    color: #db9a9a;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-left: 20vw;
+}
+body{
+    background-image: url(/static/images/form1.png);
+    background-size: cover;
+}
+.form{
+    width: 50%;
+    padding: 2rem 1rem;
+    margin-top: 0.3rem;
+    margin-left: 1rem;
+    text-align: center;
+}
+h1{
+    font-size: 2.5rem;
+    color: black;
+    font-family: 'Poppins';
+    margin-bottom: 1rem;
+}
+.reg input{
+    width: 75%;
+    padding: 12px 20px;
+    margin-bottom: 0.7rem;
+    border-radius: 20px;
+    background: #ebe0eb;
+    outline: none;
+    border: none;
+    height: 6vh;
+}
+.column .reg{
+    display: flex;
+    column-gap: 5px;
+    width:75%;
+    margin: auto;
+}
+h3{
+    font-size: 1rem;
+    text-align: justify;
+    padding: 1rem;
+    margin-left: 5rem;
+    font-family: 'league spartan';
+    color: #8d8989;
+}
+.upload{
+    font-family: 'league spartan';
+    width: 100%;
+    margin-left: 6rem;
+    justify-content: space-between;
+    display: flex;
+}
+.upload .sign{
+    margin-top: 1rem;
+}
+.upload label{
+    display: flex;
+}
+
+button{
+    font-size: 1rem;
+    margin-top: 1.8rem;
+    padding: 10px 0;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 25%;
+    color: #ffff;
+    cursor: pointer;
+    background: rgb(216, 10, 10);
+}
+button:hover{
+    background: rgb(139, 3, 3);
+}
+input:focus{
+    border: 1px solid rgb(231, 9, 9);
+}
