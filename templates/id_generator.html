@@ -25,36 +25,58 @@
 
     <div class="form">
         <h1>ID GENERATOR</h1>
-        <form action="#" class="reg">
-            <input type="text" placeholder="Full Name" required>
-            <input type="text" placeholder="Program">
+        <form method="POST" action="#" class="reg">
+            <div class="form-group">
+            <!-- <input type="text" placeholder="Full Name" required> -->
+            {{form.full_name(placeholder="Full Name")}}
+            </div>
+            <div class="form-group">
+            <!-- <input type="text" placeholder="Program"> -->
+            {{form.program(placeholder="Program")}}
+             </div>
+           
         </form>
 
         <div class="column">
-            <form action="#" class="reg">
-                <input type="text" placeholder="SR Code">
-                <input type="text" placeholder="Year">
+            <form method="POST" action="#" class="reg">
+                <div class="form-group" style="margin-left: -1.5rem;">
+                <!-- <input type="text" placeholder="SR Code"> --> 
+                {{form.sr_code(placeholder="SR-Code")}}
+                </div>
+                <div class="form-group">
+                <!-- <input type="text" placeholder="Year"> -->
+                {{form.year(placeholder="Year")}}
+                 </div>
             </form>
         </div>
         
     
         <h3>Emergency Contact</h3>
-        <form action="#" class="reg">
-            <input type="text" placeholder="Contact Person">
-            <input type="text" placeholder="Address">
-            <input type="text" placeholder="Contact Number">
+        <form method="POST" action="#" class="reg">
+            <div class="form-group">
+            <!-- <input type="text" placeholder="Contact Person"> -->
+            {{form.contact_person(placeholder="Contact Person")}}
+            </div>
+            <div class="form-group">
+            <!-- <input type="text" placeholder="Address"> -->
+            {{form.address(placeholder="Address")}}
+            </div>
+            <div class="form-group">
+            <!-- <input type="text" placeholder="Contact Number"> -->
+            {{form.contact_number(placeholder="Contact Number")}}
+            </div>
             <br>
             
          </form>
          <h3>Upload Files</h3>
 
          <div class="upload">
-            <form action="#" class="pic">
+            <form method="POST" action="#" class="pic">
                 <label>ID Picture</label><input type="file" placeholder="Upload ID Picture">
             </form>
         </div>
         <div class="upload">
-            <form action="#" class="sign">
+            <form method="POST" action="#" class="sign">
                 <label>E-Signature </label><input type="file" placeholder="Upload E-Signature">
             </form>
         </div>
