@@ -9,8 +9,8 @@
 
 /* ID Generator */
 
-.ID_gen{
-    background-image: url('/static/images/form1.png');
+#back_IDgen{
+    background-image: url('form1.png');
     background-size: cover; 
 }
 .banner{
@@ -81,8 +81,7 @@ h3{
     display: flex;
 }
 
-.button{
-
+button{
     font-size: 1rem;
     margin-top: 1.8rem;
     padding: 10px 0;
@@ -94,7 +93,7 @@ h3{
     cursor: pointer;
     background: rgb(216, 10, 10);
 }
-.button:hover{
+button:hover{
     background: rgb(139, 3, 3);
 }
 input:focus{
@@ -104,7 +103,7 @@ input:focus{
 /* Log In */
 
 #back_login {
-    background-image: url('/static/images/campus.png');
+    background-image: url(campus.png);
     background-size: cover;
 }
 
