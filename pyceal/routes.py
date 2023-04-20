@@ -21,3 +21,6 @@ def login():
      form = LoginForm()
      return render_template ('login.html', form=form)
 
+@app.route("/preview", methods=['GET', 'POST'])
+def preview():
+     return render_template ('preview.html')

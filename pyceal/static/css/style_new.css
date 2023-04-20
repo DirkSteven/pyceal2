@@ -43,7 +43,7 @@ h1{
     font-family: 'Poppins';
     margin-bottom: 1rem;
 }
-.reg input{
+.reg  input{
     width: 75%;
     padding: 12px 20px;
     margin-bottom: 0.7rem;
@@ -53,11 +53,17 @@ h1{
     border: none;
     height: 6vh;
 }
-.column .reg{
+.column {
     display: flex;
     column-gap: 5px;
-    width:75%;
     margin: auto;
+    padding: 12px 20px;
+    margin-bottom: 0.7rem;
+    border-radius: 20px;
+    background: #ebe0eb;
+    outline: none;
+    border: none;
+    height: 6vh;
 }
 h3{
     font-size: 1rem;
@@ -71,14 +77,15 @@ h3{
     font-family: 'league spartan';
     width: 100%;
     margin-left: 6rem;
-    justify-content: space-between;
+    justify-content:space-between;
     display: flex;
-}
-.upload .sign{
     margin-top: 1rem;
+    margin-right: 20rem;
+    width: 28rem;
 }
 .upload label{
     display: flex;
+    margin-right: 10rem;
 }
 
 button{
@@ -145,7 +152,15 @@ input:focus{
     max-width: 10rem;
     margin-left: 4rem;
     margin-bottom: 1rem;
+    margin-top: 1rem;
 }
+.save_p{
+    font-family: 'league spartan';
+    margin-left: 1rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+}
+
 .pass a{
     text-decoration: none;
     color: rgb(156, 106, 106);
@@ -177,4 +192,42 @@ input:focus{
     color:rgb(238, 8, 8) ;
 }
 
+/* Preview Page */
 
+#prev{
+    background-image: url(preview.png);
+    background-size: cover;
+}
+.acc_info{
+    margin: auto;
+    margin-top: 2rem;
+    display: block;
+    justify-content: center;
+    background-color: #f7f5f5;
+    align-items: center;
+    height: 5.2rem;
+    border-radius: 5px;
+    width: 30%;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    font-family: 'Arial';
+
+}
+.name{
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+.acc_info .sub{
+    color:#8d8989;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+.ID_prev{
+    font-family: 'league spartan';
+    font-size: 5rem;
+    margin-top: 1rem;
+    margin-left: 40%;
+    letter-spacing: 2px;
+    
+}

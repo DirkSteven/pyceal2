@@ -6,7 +6,7 @@
    
 }
 body{
-    background-image: url(bsu.png);
+    background-image: url(/static/images/bsu.png);
     background-size:cover;
     background-repeat: no-repeat;
 }
