@@ -1,6 +1,7 @@
 from flask_wtf  import FlaskForm
 from wtforms import StringField, SubmitField, BooleanField
 from wtforms.validators import DataRequired, Length, Email
+    
 
 class ID_Form(FlaskForm):
 ## Req Contacts 
@@ -23,3 +24,4 @@ class LoginForm(FlaskForm):
     sr_code = StringField('Sr_code', validators=[DataRequired(), Length(min=2, max=10)]) 
     remember = BooleanField("Remember Me")
     login = SubmitField('Login')
+
