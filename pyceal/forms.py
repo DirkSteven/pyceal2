@@ -1,33 +1,30 @@
 from flask_wtf  import FlaskForm
-from wtforms import StringField, SubmitField, BooleanField, FileField
-from wtforms.validators import DataRequired, Length, Email
+from pyceal import app, db
+from flask_wtf.file import FileField, FileRequired
+from wtforms import StringField, SubmitField, BooleanField
+from wtforms.validators import DataRequired, Length, Email, Regexp
     
 
 class ID_Form(FlaskForm):
-## Req Contacts 
+
     full_name = StringField('Full Name', validators=[DataRequired()])
     program = StringField('Program', validators=[DataRequired()])
+    year_validity = StringField('Year', validators=[DataRequired()])
+    sr_code = StringField('Sr_code', validators=[DataRequired(), Length(min=2, max=8), Regexp('^[0-9-]+$')])
     email = StringField('Email', validators=[DataRequired(), Email()])
-    sr_code = StringField('Sr_code', validators=[DataRequired(), Length(min=2, max=10)])
-    year = StringField('Year', validators=[DataRequired(), Length(min=2, max=4)])
 
+    id_img = FileField('Upload ID Picture', name='id_img', validators=[FileRequired()])
+    sign_img = FileField('Upload Signature', name='sign_img', validators=[FileRequired()])
 
-## need image 
-
-## EMERGENCY CONTACT
-    contact_person = StringField('Contact_person', validators=[DataRequired()])
+    contact_person = StringField('Contact in Person', validators=[DataRequired()])
+    contact_number = StringField('Personal Contact Number', validators=[DataRequired()])
     address = StringField('Address', validators=[DataRequired()])
-    contact_number = StringField('Contact_number', validators=[DataRequired()])
 
-## upload files
-    image_upload = FileField('Upload Image')
-    e_sig = FileField('Upload Signature')
-## Submit Field
     generate_id = SubmitField("Generate ID")
 
 class LoginForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
-    sr_code = StringField('Sr_code', validators=[DataRequired(), Length(min=2, max=10)]) 
-    remember = BooleanField("Remember Me")
+    sr_code = StringField('Sr_code', validators=[DataRequired(), Length(min=2, max=10), Regexp('^[0-9-]+$')]) 
+    remember_me = BooleanField("Remember Me")
     login = SubmitField('Login')
 

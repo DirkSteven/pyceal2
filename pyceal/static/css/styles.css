@@ -8,6 +8,17 @@
 }
 
 /* ID Generator */
+.output{
+    width: 35rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left:-8.5rem;
+    padding: 5px;
+    border: 2px solid transparent;
+    border-color: #858282;
+    margin-bottom: 2rem;
+}
 
 #back_IDgen{
     background-image: url(/static/images/form.png);
@@ -129,6 +140,14 @@ input:focus{
 
 /* Log In */
 
+.form-error {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    /* margin-left: -6rem; */
+    margin-bottom: 5px;
+    color:  rgb(231, 9, 9);
+}
 #back_login {
     background-image: url(/static/images/campus1.png);
     background-size: cover;
@@ -141,10 +160,10 @@ input[type="checkbox"] {
 }
 
 .login_container{
-    margin-top: 3rem;
-    position:fixed;
+    margin-top: 30rem;
+    position: relative;
     max-width: 23rem;
-    height: 25rem;
+    min-height: 24rem;
     width: 100%;
     top: 50%;
     left: 50%;
@@ -157,25 +176,34 @@ input[type="checkbox"] {
    
 }
  .login_form{
-    position: fixed;
-    margin-left: 1rem;
+    position: relative;
+    /* margin-left: 1.5rem; */
     margin-top: 1rem;
     width: 100%;
 }
 .content_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.content_login form{
     width: 100%;
- 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .login_form h5{
     font-size: 2rem;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 1rem;
     
+    
 }
 .btn_login{
     width: 100%;
     max-width: 10rem;
-    margin-left: 4rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
@@ -189,7 +217,6 @@ input[type="checkbox"] {
 
 .save_p{
     font-family: 'league spartan';
-    margin-left: 1rem;
     font-size: 0.8rem;
     margin-bottom: 0.4rem;
 }
@@ -206,19 +233,14 @@ input[type="checkbox"] {
 }
 .check{
     font-family: 'league spartan';
-    margin-top: 3rem;
-    margin-right: 4rem;
-    width: 100%;
-    position: absolute;
-    top: 90%;
-    left: 70%;
-    transform: translate(-50%, -50%);
     color: rgb(71, 70, 70);
     text-decoration: none;
     font-size: 0.9rem;
+    margin: 0;
 }
 .check a{
     text-decoration: none;
+    font-weight: bolder;
     color:rgb(71, 70, 70);
 }
 .check a:hover{
@@ -260,7 +282,78 @@ input[type="checkbox"] {
     font-family: 'league spartan';
     font-size: 5rem;
     margin-top: 1rem;
-    margin-left: 40%;
+    margin-left: 42%;
     letter-spacing: 2px;
+    align-items: center;
     
 }
+.flashes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+    
+.flashes li {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    }
+.output{
+    border: 2px solid transparent;
+    border-color: #858282;
+    width: 36rem;
+}
+
+.prev_btn{
+    display: flex;
+    justify-content: center;
+    column-gap: 5rem;
+    margin-left: 5rem;
+}
+/* 
+#print{
+    background-color: #b4b0b0;
+    margin-bottom: 2rem;
+    width: 10rem;
+}
+#print:hover{
+    background-color: rgb(238, 8, 8);
+}
+#logout{
+    background-color: #b4b0b0;
+    width: 10rem;
+}
+#logout:hover{
+    background-color: rgb(238, 8, 8);
+} */
+
+
+button#print  {
+    background-color:  rgb(238, 8, 8);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease-in-out;;
+    margin-left:-8vh;
+    width:8rem;
+  }
+  button#logout{
+    background-color: rgb(238, 8, 8);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease-in-out;;
+    margin-left:8vh;
+    width:8rem;
+  }
+  
+  button#print:hover, button#logout:hover {
+    background-color: #921212;;
+  }

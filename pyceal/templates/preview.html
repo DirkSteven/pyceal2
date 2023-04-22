@@ -8,6 +8,7 @@
     <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
 
     <title>PyCeal | ID Generator</title>
+    
 </head>
 <body id="prev">
     <div class="info_gen">
@@ -20,17 +21,48 @@
 
         <div class="account_box">
             <div class="acc_info">
-                <strong class="name">DELA CRUZ, JUAN C.</strong>
+                <strong class="name">{{ user.full_name }}</strong>
                 <div class="sub">
-                    <p>12-345</li>
-                    <p>juandelacruz@gmail.com</p>
+                    <p>{{ user.sr_code }}</li>
+                    <p>{{ user.email }}</p>
                 </div>
             </div>
         </div>
 
         <div class="ID_prev">
             <h1>ID PREVIEW</h1>
+            <img id = "myImage" class= 'output', src="{{ url_for('static', filename='images/user_images/output_pic.png') }}">
         </div>
+        <div class="prev_btn">
+            <div class="print-p">
+              <button id="print">Print ID</button>
+            </div>
+            <div class="log-out">
+              <a href="{{ url_for('logout') }}"><button id="logout">Logout</button></a>
+            </div>
+          </div>
+
+        <script>
+                const printBtn = document.getElementById('print');
+                const image = document.getElementById('myImage');
+
+                printBtn.addEventListener('click', function() {
+                    printImage();
+                });
+
+                function printImage() {
+                    let printWindow = window.open('', 'Print Window');
+                    printWindow.document.write('<html><head><title>Image Preview</title>');
+                    printWindow.document.write('<style>img {max-width: 80%; height: auto;}</style>');
+                    printWindow.document.write('</head><body><img src="' + image.src + '"></body></html>');
+                    printWindow.document.close();
+                    printWindow.focus();
+                    printWindow.print();
+                    printWindow.close();
+                    window.location.reload();
+                }
+        </script>
+        
 
 </body>
 </html>

@@ -27,12 +27,21 @@
                 <h4>Powered by: PyCeal</h4>
             </div>
         </div> 
-
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
         <div class="form">
             <h1>ID GENERATOR</h1>
-            <form action="#" class="reg">
+            <form action="#" class="reg" method="post" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
                 <div class="form-group">
-                    {{ form.full_name(placeholder="Full Name") }}
+                    {{ form.full_name(placeholder="Full Name (First Name, M. I., Last Name)") }}
                 </div>
                 <div class="form-group">
                     {{ form.program(placeholder="Program") }}
@@ -41,9 +50,9 @@
                     {{ form.sr_code(placeholder="SR-Code") }}
                 </div>
                 <div class="form-group">
-                    {{ form.year(placeholder="Year") }}
+                    {{ form.year_validity(placeholder="Academic Year (e.g 2022-2023)") }}
                 </div>
-          
+
             <div class="form-group">
                 <div class="reg">
                     {{ form.email(placeholder="Email") }}
@@ -70,16 +79,15 @@
 
                 <div class="upload">
                     <div class="form-group">
-                        {{form.image_upload.label()}}
-                        {{form.image_upload()}} 
+                        {{form.id_img.label()}}
+                        {{form.id_img()}} 
                     </div>
                 </div>
 
                 <div class="upload">
                     <div class="form-group">
-                        {{form.e_sig.label()}}
-                        {{form.e_sig()}} 
-                        
+                        {{form.sign_img.label()}}
+                        {{form.sign_img()}} 
                     </div>
                 </div>
         

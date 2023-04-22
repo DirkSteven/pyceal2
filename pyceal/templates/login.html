@@ -20,50 +20,45 @@
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
     </script> 
 
-
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class="flashes">
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
  
     <div class="login_container">
         <div class="login_form">
             <h5>Log In</h5>
             <div class="content_login">
-                <form action="#" class="reg">
-                    <div class="form-group">
-                            <!-- <input type="email" placeholder="Email Address"> -->
-                            {{form.email(placeholder="Email")}}   
-                    </div>
-
-                    <div class="form-group">
-                            <!-- <input type="text" placeholder="SR-code"> -->
-                             {{form.sr_code(placeholder="SR-Code")}} 
-                    </div>
-                 
-
-
-
-                    <div class="save_p">
-                        <div class="form-check">
-                            {{form.remember()}}
-                            {{form.remember.label("Remember Password")}}
+                <form action="#" class="reg" method="post">
+                    {{ form.hidden_tag() }}
                     
-                         </div>
-                    </div> 
-                    
-              
-            
-            
-                
-                        <div class="form-group">
-                                {{form.login( class="button btn_login")}} 
+                     <!-- <input type="email" placeholder="Email Address"> -->
+                     {{form.email(placeholder="Email")}}
+                     {% for error in form.email.errors %}
+                     <span class="form-error">[{{ error }}]</span>
+                     {% endfor %}
+                     
+                     <!-- <input type="email" placeholder="Email Address"> -->
+                     {{form.sr_code(placeholder="SR-Code")}}
+                     {% for error in form.sr_code.errors %}
+                     <span class="form-error">[{{ error }}]</span>
+                     {% endfor %}
+                     
+                        <div class="form-check save_p">
+                            {{form.remember_me()}}
+                            {{form.remember_me.label("Remember Password")}}
                         </div>
-                   
-            
-                </form> 
-              
 
-                <div class="check">
-                <p>I have no ID. <a href="id_generator">Click here.</a></p>
-                </div>
+                    {{form.login( class="button btn_login")}} 
+                    <p class="check">I have no ID. <a href="id_generator">Click here.</a></p>
+                </form> 
             </div>
+            
         </div>
     </div>
 

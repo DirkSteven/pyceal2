@@ -5,6 +5,18 @@
 
    
 }
+.flashes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+    
+.flashes li {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    }
 body{
     background-image: url(/static/images/bsu.png);
     background-size:cover;
