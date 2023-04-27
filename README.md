@@ -92,9 +92,3 @@ The following listed tools may be **POSSIBLY** utilized in the project. <br>
 ##  <a id = "notes"> 📝 Notes </a><br>
 <br><br>
 
-<pre>
-```python|example.py
-
-print ("Hello World")
-```
-</pre>
