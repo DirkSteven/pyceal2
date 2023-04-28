@@ -8,7 +8,7 @@
 <br><br>
 
 ## Installation 
-  <p> First install the dependencies required on the requirements.txt. To do this run `terminal` and enter the command below.</p>
+  <p> First install the dependencies required on the requirements.txt. To do this run `console` and enter the command below.</p>
 
 ```shell 
     pip install -r requirements.r
