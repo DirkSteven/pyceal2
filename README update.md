@@ -193,6 +193,8 @@ This route refers to the Download of the website. It will download the generated
 <br>
 
 <br>
+
+
 ## Forms
   &nbsp;&nbsp;&nbsp; The Flask-WTF extension will be utilized to handle web forms in this application. It acts as a seamless integration between Flask and the WTForms package. This is the first of several Flask extensions that will be introduced, as extensions play a vital role in addressing challenges that Flask intentionally avoids taking a stance on.
   <br>
