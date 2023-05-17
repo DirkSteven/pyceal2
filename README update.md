@@ -196,18 +196,25 @@ This route refers to the Download of the website. It will download the generated
 
 
 ## Forms
+
+
   &nbsp;&nbsp;&nbsp; The Flask-WTF extension will be utilized to handle web forms in this application. It acts as a seamless integration between Flask and the WTForms package. This is the first of several Flask extensions that will be introduced, as extensions play a vital role in addressing challenges that Flask intentionally avoids taking a stance on.
   <br>
-  > Forms will be extensively used on different routes of the website, specifically `/id_generator` , `/login` and `/decode`. The obtained data will be passed on the `models.py` that will store the data on the database. These can be edited and found at `forms.py`, details are as follow below. 
-  <br>
+  
+  
+> Forms will be extensively used on different routes of the website, specifically `/id_generator` , `/login` and `/decode`. The obtained data will be passed on the `models.py` that will store the data on the database. These can be edited and found at `forms.py`, details are as follow below. 
 
 ```python
 class ID_Form(FlaskForm):
 ```
+
 ><b>The class `ID_Form(FlaskForm)` will be the forms that will be used on the `id_generator.html` to obtain and generate data for the ID. </b>
 
 
 <br>
+
+
+
 ```python
 
 class LoginForm(FlaskForm):
