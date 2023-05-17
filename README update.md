@@ -223,6 +223,9 @@ class DecodeForm(FlaskForm):
 
 
 <br>
+
+
+
 ## Models
   &nbsp;&nbsp;&nbsp; The data that will be stored in the database will be represented by a collection of classes, usually called database models. The ORM layer within SQLAlchemy will do the translations required to map objects created from these classes into rows in the proper database tables.
 
@@ -250,6 +253,8 @@ class User(UserMixin, db.Model):
     address = db.Column(db.String(20), nullable=True)
     contact_number = db.Column(db.String(20), nullable=True)
   ```
+  
+  
   <b>`nullable`</b>: This attribute is used to specify whether a column can contain null values or not. When nullable is set to `True`, the column allows null values. When set to `False`, the column is marked as non-nullable, meaning it must always have a value. The default value of nullable is `True` if not explicitly specified.
 
   <b>`unique`</b>: This attribute is used to enforce uniqueness in the values of a column. When unique is set to True, the column's values must be unique across all rows in the table. Attempting to insert a duplicate value into a unique column will result in an integrity error. By default, `unique` is set to `False`.
@@ -259,8 +264,8 @@ class User(UserMixin, db.Model):
 <br>
 
 ## Database Configuration 
-  &nbsp;&nbsp;&nbsp; Database profile and presets is found on the ``config.py`` file. 
-  > The preset configuration will create a database file named ``app.db``. 
+&nbsp;&nbsp;&nbsp; Database profile and presets is found on the ``config.py`` file. 
+> The preset configuration will create a database file named ``app.db``. 
   
    
 <br>
