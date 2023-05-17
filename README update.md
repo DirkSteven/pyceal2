@@ -206,18 +206,23 @@ class ID_Form(FlaskForm):
 ```
 ><b>The class `ID_Form(FlaskForm)` will be the forms that will be used on the `id_generator.html` to obtain and generate data for the ID. </b>
 
+
 <br>
 ```python
 
 class LoginForm(FlaskForm):
 ```
-><b> The class `LoginForm(FlaskForm)` will obtain the data passed on the login page and will pass the data and check if it the user is registered in the database. 
-</b><br>
+><b> The class `LoginForm(FlaskForm)` will obtain the data passed on the login page and will pass the data and check if it the user is registered in the database. </b>
+
+
+
+
+<br>
 
 ```python
 class DecodeForm(FlaskForm):
 ```
-><b> Similar to `LoginForm(FlaskForm)`, the `DecodeForm(FlaskForm)` will obtain an image data submitted on the decode page and compare the authenticity of the image submitted with regards to the similar file in the database.   </b><br>
+><b> Similar to `LoginForm(FlaskForm)`, the `DecodeForm(FlaskForm)` will obtain an image data submitted on the decode page and compare the authenticity of the image submitted with regards to the similar file in the database.  </b><br>
 
 
 
