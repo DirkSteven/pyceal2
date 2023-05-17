@@ -206,11 +206,11 @@ class ID_Form(FlaskForm):
 
 <br>
 ```python
-
 class LoginForm(FlaskForm):
 ```
  ><b> The class `LoginForm(FlaskForm)` will obtain the data passed on the login page and will pass the data and check if it the user is registered in the database. 
  </b><br>
+ 
 ```python
 class DecodeForm(FlaskForm):
 ```
