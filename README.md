@@ -121,8 +121,54 @@ if __name__ =='__main__':
 ```
 
 ## Steganography Script
-  &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; sample text...
+  &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; 
+  This is the encode method inside the Generate_ID class. It takes in 3 arguments, first is the image file opened using pillow. Then the string message which will be embedded inside the image. Finally, the key in order to extract this message in the decode method which is also inside the Generate_ID class.
 
+
+
+  ```python
+
+ def encode_image(self, pil_img, message, key):
+        # Open the image
+        image = pil_img
+
+        # Convert the image to RGB mode if necessary
+        if image.mode != 'RGB':
+            image = image.convert('RGB')
+
+        message+= ' ' + key + ' '
+
+        # Convert the message to binary
+        binary_message = ''.join(format(ord(char), '08b') for char in message)
+
+        # Get the size of the image
+        width, height = image.size
+
+        print(width, height)
+
+        # Check if the message is too long to fit in the image
+        if len(binary_message) > width * height:
+            raise ValueError("Message too long to fit in image")
+
+        # Iterate over each pixel in the image
+        pixels = image.load()
+        index = 0
+        for x in range(width):
+            for y in range(height):
+                # Get the binary representation of the pixel value
+                binary_pixel = format(pixels[x, y][0], '08b')
+
+                # Replace the least significant bit with a bit from the message
+                if index < len(binary_message):
+                    new_binary_pixel = binary_pixel[:-1] + binary_message[index]
+                    pixels[x, y] = (int(new_binary_pixel, 2), pixels[x, y][1], pixels[x, y][2])
+                    index += 1
+
+        # Save the encoded image
+        return image
+
+  ```
+<br>
 
 
 
