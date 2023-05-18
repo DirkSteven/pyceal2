@@ -6,7 +6,6 @@
     background-repeat: no-repeat;
    
 }
-
 /* ID Generator */
 .output{
     width: 35rem;
@@ -38,14 +37,13 @@
     font-family:'League Spartan';
     letter-spacing: 5px;
     display: flex;
+    justify-content: space-between;
 }
 .banner .pyceal h4{
     color: #db9a9a;
     font-size: 1rem;
     letter-spacing: 1px;
-    margin-left: 20vw;
 }
-
 .form{
     width: 50%;
     padding: 2rem 1rem;
@@ -103,7 +101,6 @@ h3{
     display: flex;
     margin-right: 10rem;
 }
-
 .button{
     font-size: 1rem;
     margin-top: 1.8rem;
@@ -158,7 +155,6 @@ input[type="checkbox"] {
     height: .8rem;
     margin-left:-1rem;
 }
-
 .login_container{
     margin-top: 30rem;
     position: relative;
@@ -175,7 +171,7 @@ input[type="checkbox"] {
     box-shadow: rgba(0, 0, 0, 0.1);
    
 }
- .login_form{
+.login_form{
     position: relative;
     /* margin-left: 1.5rem; */
     margin-top: 1rem;
@@ -185,7 +181,6 @@ input[type="checkbox"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 .content_login form{
     width: 100%;
@@ -198,8 +193,6 @@ input[type="checkbox"] {
     font-size: 2rem;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 1rem;
-    
-    
 }
 .btn_login{
     width: 100%;
@@ -214,13 +207,11 @@ input[type="checkbox"] {
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
-
 .save_p{
     font-family: 'league spartan';
     font-size: 0.8rem;
     margin-bottom: 0.4rem;
 }
-
 .pass a{
     text-decoration: none;
     color: rgb(156, 106, 106);
@@ -266,7 +257,6 @@ input[type="checkbox"] {
     padding-left: 2rem;
     padding-top: 1rem;
     font-family: 'Arial';
-
 }
 .name{
     font-size: 1.2rem;
@@ -285,14 +275,12 @@ input[type="checkbox"] {
     margin-left: 42%;
     letter-spacing: 2px;
     align-items: center;
-    
 }
 .flashes {
     list-style: none;
     margin: 0;
     padding: 0;
-    }
-    
+    }  
 .flashes li {
     padding: 10px;
     border: 1px solid #ccc;
@@ -304,7 +292,6 @@ input[type="checkbox"] {
     border-color: #858282;
     width: 36rem;
 }
-
 .prev_btn{
     display: flex;
     justify-content: center;
@@ -327,8 +314,6 @@ input[type="checkbox"] {
 #logout:hover{
     background-color: rgb(238, 8, 8);
 } */
-
-
 button#print  {
     background-color:  rgb(238, 8, 8);
     border: none;
@@ -339,9 +324,21 @@ button#print  {
     padding: 10px 20px;
     transition: background-color 0.3s ease-in-out;;
     margin-left:-8vh;
-    width:8rem;
-  }
-  button#logout{
+    min-width:8rem;
+}
+button#download  {
+    background-color:  rgb(238, 8, 8);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease-in-out;;
+    margin-left:-8vh;
+    min-width:8rem;
+}
+button#logout{
     background-color: rgb(238, 8, 8);
     border: none;
     border-radius: 10px;
@@ -351,9 +348,17 @@ button#print  {
     padding: 10px 20px;
     transition: background-color 0.3s ease-in-out;;
     margin-left:8vh;
-    width:8rem;
-  }
-  
-  button#print:hover, button#logout:hover {
+    min-width:8rem;
+}
+button#print:hover, button#logout:hover {
     background-color: #921212;;
-  }
+}
+button#download:hover, button#logout:hover {
+    background-color: #921212;;
+}
+
+.img-selected{
+    border: 3px solid black;
+    width: 200px;
+    height: 200px;
+}

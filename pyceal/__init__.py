@@ -5,21 +5,22 @@ from flask_migrate import Migrate
 from flask_login import LoginManager
 
 
-
-
 app = Flask(__name__, template_folder='templates')
 app.config.from_object(Config)
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
+
 login = LoginManager(app)
-login.login_view = 'login'
+login.login_view ='login'
 login.init_app(app)
 
 
 @login.unauthorized_handler
 def unauthorized():
-    flash('Hakdogh ka ba? Kelangan mo muna mag login!!')
+    flash('To access this page, please login to your account first.')
+    
     return redirect(url_for('login'))
+
 
 from pyceal import routes, models

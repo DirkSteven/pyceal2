@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename ='/css/styles.css')}}"> 
     <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
-
-    <title>PyCeal | ID Generator</title>
+    
+    <title> {{title}} </title>
     
 </head>
 <body id="prev">
+    
     <div class="info_gen">
         <div class="banner">
-            <strong>BATANGAS STATE UNIVERSITY</strong>-The National Engineering University
+            <p><strong>BATANGAS STATE UNIVERSITY</strong>-The National Engineering University</p>
             <div class="pyceal">
                 <h4>Powered by: PyCeal</h4>
             </div>
@@ -37,31 +38,17 @@
             <div class="print-p">
               <button id="print">Print ID</button>
             </div>
+            <div>
+              <a href="/download">
+                <button id="download">Download ID</button>
+              </a>
+            </div>
             <div class="log-out">
               <a href="{{ url_for('logout') }}"><button id="logout">Logout</button></a>
             </div>
-          </div>
-
-        <script>
-                const printBtn = document.getElementById('print');
-                const image = document.getElementById('myImage');
-
-                printBtn.addEventListener('click', function() {
-                    printImage();
-                });
-
-                function printImage() {
-                    let printWindow = window.open('', 'Print Window');
-                    printWindow.document.write('<html><head><title>Image Preview</title>');
-                    printWindow.document.write('<style>img {max-width: 80%; height: auto;}</style>');
-                    printWindow.document.write('</head><body><img src="' + image.src + '"></body></html>');
-                    printWindow.document.close();
-                    printWindow.focus();
-                    printWindow.print();
-                    printWindow.close();
-                    window.location.reload();
-                }
-        </script>
+        </div>
+        <script type ="text/javascript" src="{{ url_for('static', filename ='/js/script.js')}}"> </script>
+    </div>
         
 
 </body>
