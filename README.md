@@ -170,15 +170,6 @@ if __name__ =='__main__':
   ```
 <br>
 
-
-
-  ```python
-
-  hello world 
-
-  ```
-<br>
-
 ## Routes
   &nbsp;&nbsp;&nbsp; Modern web apps use a technique named routing. This helps the user remember the URLs. For instance, instead of having /booking.php they see /booking/. Instead of /account.asp?id=1234/ they’d see /account/1234/. In this project, the routes can be found at `routes.py` file. 
 
