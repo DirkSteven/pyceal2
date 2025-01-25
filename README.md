@@ -43,22 +43,7 @@ The following listed tools are utilized in this project. <br>
 - [x] Bootstrap <br> 
 - [x] Javascript <br>
 
-In addition, the dependencies and libraries that are found in the `requirements.txt` are listed below:
-- [x] alembic==1.10.4
-- [x] Flask==2.3.2
-- [x] Flask_Login==0.6.2
-- [x] Flask_Migrate==4.0.4
-- [x] flask_sqlalchemy==3.0.3
-- [x] Flask_WTF==1.1.1
-- [x] numpy==1.24.3
-- [x] opencv_python_headless==4.7.0.72
-- [x] Pillow==9.5.0
-- [x] Pillow==9.5.0
-- [x] rembg==2.0.36
-- [x] SQLAlchemy==2.0.13
-- [x] Werkzeug==2.3.4
-- [x] WTForms==3.0.1
-<br>
+In addition, the dependencies and libraries that are found in the `requirements.txt`.
 
 
 
