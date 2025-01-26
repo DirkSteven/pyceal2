@@ -21,7 +21,7 @@
 
 
 ## <a id = "proj-obv"> 🎯Features </a> <br>
- This project is a id-generaeting software etc etc etc 
+
 1. ID-image Generator: One of the features of this product is the ability to create identification card images. These images include a photo of the person, as well as their personal information such as name, date of birth, and ID number.
 
 2. Secured ID-image: the generated output goes a step further in terms of security by incorporating image steganography; an image that contains hidden information or data that can only be accessed by authorized individuals. 
