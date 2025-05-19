@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename ='/css/root_style.css')}}"> 
+    <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
+
+
+    <title> {{title}} </title>
+</head>
+<body>
+
+
+    
+  <div class="head">
+    <div class="BSU">
+        <h1>BATANGAS STATE UNIVERSITY</h1>
+    </div>
+    <div class="NEU">
+        <h2>The National Engineering University</h2>
+    </div>
+    <div class="Motto">
+        <h3>Leading Innovations, Transforming Lives</h3>
+    </div>
+</div>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    <ul class="flashes">
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+{% endwith %}
+<div class="button">
+    <a href =login>
+     <button onclick="document.location='default.asp">Get Started</button>
+    </a>
+</div>
+
+</body>
+</body>
+</html>

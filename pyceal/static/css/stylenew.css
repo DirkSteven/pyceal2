@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+
+/* ID Generator */
+
+#back_IDgen{
+    background-image: url('form1.png');
+    background-size: cover; 
+}
+.banner{
+    background-color: rgb(197, 8, 8);
+    padding: 1.1rem;
+    color: aliceblue;
+    font-size: 1.3rem;
+    width: 100%;
+    font-family:'League Spartan';
+    letter-spacing: 5px;
+    display: flex;
+}
+.banner .pyceal h4{
+    color: #db9a9a;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-left: 20vw;
+}
+
+.form{
+    width: 50%;
+    padding: 2rem 1rem;
+    margin-top: 0.3rem;
+    margin-left: 1rem;
+    text-align: center;
+}
+h1{
+    font-size: 2.5rem;
+    color: black;
+    font-family: 'Poppins';
+    margin-bottom: 1rem;
+}
+.reg input{
+    width: 75%;
+    padding: 12px 20px;
+    margin-bottom: 0.7rem;
+    border-radius: 20px;
+    background: #ebe0eb;
+    outline: none;
+    border: none;
+    height: 6vh;
+}
+.column .reg{
+    display: flex;
+    column-gap: 5px;
+    width:75%;
+    margin: auto;
+}
+h3{
+    font-size: 1rem;
+    text-align: justify;
+    padding: 1rem;
+    margin-left: 5rem;
+    font-family: 'league spartan';
+    color: #8d8989;
+}
+.upload{
+    font-family: 'league spartan';
+    width: 100%;
+    margin-left: 6rem;
+    justify-content: space-between;
+    display: flex;
+}
+.upload .sign{
+    margin-top: 1rem;
+}
+.upload label{
+    display: flex;
+}
+
+button{
+    font-size: 1rem;
+    margin-top: 1.8rem;
+    padding: 10px 0;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 25%;
+    color: #ffff;
+    cursor: pointer;
+    background: rgb(216, 10, 10);
+}
+button:hover{
+    background: rgb(139, 3, 3);
+}
+input:focus{
+    border: 1px solid rgb(231, 9, 9);
+}
+
+/* Log In */
+
+#back_login {
+    background-image: url(campus.png);
+    background-size: cover;
+}
+
+
+.login_container{
+    margin-top: 3rem;
+    position:fixed;
+    max-width: 23rem;
+    height: 25rem;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1.2);
+    z-index: 101;
+    background: #ffff;
+    padding: 25px;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1);
+   
+}
+ .login_form{
+    position: fixed;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+.content_login{
+    width: 100%;
+ 
+}
+.login_form h5{
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1rem;
+    
+}
+.btn_login{
+    width: 100%;
+    max-width: 10rem;
+    margin-left: 4rem;
+    margin-bottom: 1rem;
+}
+.pass a{
+    text-decoration: none;
+    color: rgb(156, 106, 106);
+    font-family: 'league spartan';
+    font-size: 0.8rem;
+    margin-left: 1rem;    
+}
+.pass a:hover{
+    color: #f30909;
+}
+.check{
+    font-family: 'league spartan';
+    margin-top: 3rem;
+    margin-right: 4rem;
+    width: 100%;
+    position: absolute;
+    top: 90%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    color: rgb(71, 70, 70);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.check a{
+    text-decoration: none;
+    color:rgb(71, 70, 70);
+}
+.check a:hover{
+    color:rgb(238, 8, 8) ;
+}
+

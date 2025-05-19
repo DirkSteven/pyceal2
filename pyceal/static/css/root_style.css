@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+   
+}
+.flashes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+    
+.flashes li {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    }
+body{
+    background-image: url(/static/images/bsu.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+.head{
+    font-family: 'league spartan';
+    align-items: center;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.BSU {
+    color: rgb(238, 8, 8);
+    font-size: 2.5rem;
+}
+.NEU{
+    color: black;
+    font-size: 1.75rem;
+}
+.Motto{
+    color: rgb(238, 8, 8);
+    font-size: 1.25rem;
+    margin-top: 10px;
+}
+button {
+    margin: 0;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    width: 10%;
+    height: 5%;
+    background:none;
+    border-color: rgb(238, 8, 8);
+    font-weight: bold;
+    font-family:'Poppins', sans-serif;
+}
+button:hover{
+    background: rgb(238, 8, 8);
+    color: white;
+}
+
