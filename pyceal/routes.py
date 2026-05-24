@@ -1,6 +1,6 @@
 from flask import render_template , url_for, request, flash, redirect, send_from_directory
 from flask_login import current_user, login_user, logout_user, login_required
-from werkzeug.urls import url_parse
+from urllib.parse import urlparse
 from pyceal import app, db
 from pyceal.forms import ID_Form, LoginForm, DecodeForm
 from pyceal.models import User
@@ -94,7 +94,7 @@ def login():
         next_page = request.args.get('next')
 
 		# check if next page exist or its netlocation is empty
-        if not next_page or url_parse(next_page).netloc != "":
+        if not next_page or urlparse(next_page).netloc != "":
             next_page = url_for('root_page')
 
         return redirect(next_page)
